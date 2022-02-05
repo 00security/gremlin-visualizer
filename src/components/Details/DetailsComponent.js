@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-  ExpansionPanel,
-  ExpansionPanelSummary,
+  Accordion,
+  AccordionSummary,
   Typography,
-  ExpansionPanelDetails,
+  AccordionDetails,
   List,
   ListItem,
   ListItemText,
@@ -152,29 +152,29 @@ class Details extends React.Component {
       <div className={'details'}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12}>
-            <ExpansionPanel>
-              <ExpansionPanelSummary
+            <Accordion>
+              <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
                 <Typography>Query History</Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
+              </AccordionSummary>
+              <AccordionDetails>
                 <List dense={true}>
                   {this.generateList(this.props.queryHistory)}
                 </List>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel>
-              <ExpansionPanelSummary
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
                 <Typography>Settings</Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
+              </AccordionSummary>
+              <AccordionDetails>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={12} md={12}>
                     <Tooltip title="Automatically stabilize the graph" aria-label="add">
@@ -223,8 +223,8 @@ class Details extends React.Component {
                     </Fab>
                   </Grid>
                 </Grid>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
+              </AccordionDetails>
+            </Accordion>
           </Grid>
           {hasSelected &&
           <Grid item xs={12} sm={12} md={12}>

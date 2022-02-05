@@ -1,7 +1,8 @@
-FROM node:10-alpine
+FROM node:16-alpine
 
 RUN npm cache clean --force && \
-	npm config set strict-ssl false
+	npm config set strict-ssl false && \
+	npm install -g opencollective
 
 EXPOSE 3000 3001
 
