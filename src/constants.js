@@ -1,4 +1,8 @@
-const SERVER_URL = 'http://localhost:3001';
+
+var SERVER_URL = '__SERVER_URL__';
+export const DEFAULT_HOST = '__DEFAULT_HOST__';
+export const DEFAULT_PORT = '__DEFAULT_PORT__';
+
 export const QUERY_ENDPOINT = `${SERVER_URL}/query`;
 export const COMMON_GREMLIN_ERROR = 'Invalid query. Please execute a query to get a set of vertices';
 export const ACTIONS = {

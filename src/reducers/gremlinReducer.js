@@ -1,8 +1,8 @@
-import { ACTIONS } from '../constants';
+import { ACTIONS, DEFAULT_HOST, DEFAULT_PORT } from '../constants';
 
 const initialState = {
-  host: 'localhost',
-  port: '8182',
+  host: DEFAULT_HOST,
+  port: DEFAULT_PORT,
   query: '',
   error: null
 };
